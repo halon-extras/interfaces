@@ -1,0 +1,4 @@
+import { interfaces, local_ips } from "extras://interfaces";
+
+echo interfaces();
+echo local_ips();

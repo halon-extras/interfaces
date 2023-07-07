@@ -1,0 +1,31 @@
+[
+    {
+        "name": "interfaces",
+        "parameters": {
+            "required": [],
+            "optional": []
+        },
+        "returnType": "array",
+        "detail": "interfaces(): array",
+        "value": "interfaces()",
+        "documentation": "Get all the interfaces.",
+        "link": "[Full documentation](https://github.com/halon-extras/interfaces)"
+    },
+    {
+        "name": "local_ips",
+        "parameters": {
+            "required": [],
+            "optional": [
+                {
+                    "name": "interface",
+                    "type": "string"
+                }
+            ]
+        },
+        "returnType": "array",
+        "detail": "local_ips([string $interface]): array",
+        "value": "local_ips($0)",
+        "documentation": "Get all the local IP-addresses or only those for a specific interface.",
+        "link": "[Full documentation](https://github.com/halon-extras/interfaces)"
+    }
+]
