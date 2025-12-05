@@ -23,9 +23,11 @@ RUN echo -n "UBU2204" > /OSRELEASE.txt
 
 RUN mkdir /tmp/halon
 RUN cd /tmp/halon \
-    && curl -O -L https://go.dev/dl/go1.20.5.linux-amd64.tar.gz \
-    && echo "d7ec48cde0d3d2be2c69203bc3e0a44de8660b9c09a6e85c4732a3f7dc442612 go1.20.5.linux-amd64.tar.gz" | sha256sum -c \
-    && tar -C /usr/local -xzf go1.20.5.linux-amd64.tar.gz
+    && curl -O -L https://go.dev/dl/go1.25.5.linux-amd64.tar.gz \
+    && echo "9e9b755d63b36acf30c12a9a3fc379243714c1c6d3dd72861da637f336ebb35b go1.25.5.linux-amd64.tar.gz" | sha256sum -c \
+    && tar -C /usr/local -xzf go1.25.5.linux-amd64.tar.gz
+RUN /usr/local/go/bin/go install github.com/CycloneDX/cyclonedx-gomod/cmd/cyclonedx-gomod@latest
+ENV PATH="$PATH:/usr/local/go/bin:/root/go/bin"
 
 RUN mkdir /licenses
 RUN cp /usr/local/go/LICENSE /licenses/LICENSE.go
