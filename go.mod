@@ -1,3 +1,3 @@
 module github.com/halon-extras/interfaces
 
-go 1.20
+go 1.26
